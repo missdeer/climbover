@@ -1,5 +1,5 @@
 ---
 layout: category
-title: Category
+title: 分类
 permalink: /category/
 ---
