@@ -1,7 +1,6 @@
 title: Climb Over
 email: brownfoxservice@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-    技术无罪 
+description: As Archive 
 baseurl: "/" 
 url: "https://climbover.pages.dev" 
 github_username: brownfoxservice
