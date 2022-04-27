@@ -1,15 +1,29 @@
 <article class="post">
 	<header class="post-header">
-		<div class="post-title"> 
+		<div class="post-title">
 			{{ page.title | escape }}
 		</div>
 		<time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 			{%- assign date_format = site.date_forma | default: "%Y/%m/%d" -%}
 			{{ page.date | date: date_format }}
-		</time>		
+		</time>
+		<!-- Ads begin -->
+		<ins class="adsbygoogle" style="display:inline-block;width:90%;height:90px"
+			data-ad-client="ca-pub-3435940217424489" data-ad-slot="9166587836"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<!-- Ads end -->
 	</header>
 
 	<div class="post-content">
 		{{ content }}
 	</div>
+	<!-- Ads begin -->
+	<ins class="adsbygoogle" style="display:inline-block;width:90%;height:90px" data-ad-client="ca-pub-3435940217424489"
+		data-ad-slot="9166587836"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<!-- Ads end -->
 </article>
