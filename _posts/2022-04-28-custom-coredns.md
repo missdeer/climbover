@@ -277,11 +277,3 @@ proxy:github.com/coredns/proxy
 | Android      | x86            |  ✔   |           | [https://coredns.minidump.info/dl/coredns-android-386-lite.zip](https://coredns.minidump.info/dl/coredns-android-386-lite.zip)               |
 | Android      | arm            |  ✔   |           | [https://coredns.minidump.info/dl/coredns-android-arm-lite.zip](https://coredns.minidump.info/dl/coredns-android-arm-lite.zip)               |
 | Android      | arm64          |  ✔   |           | [https://coredns.minidump.info/dl/coredns-android-aarch64-lite.zip](https://coredns.minidump.info/dl/coredns-android-aarch64-lite.zip)           |
-
-# 打赏
-
-如果你觉得本文对你有所帮助，可以考虑小额金钱打赏以激励我创作出更好的内容。
-
-<center class="half"><a href="wxp://f2f0JOwB8LU7CU53fcitPGIuC6lYMX1q-nlk"><img src="https://raw.githubusercontent.com/missdeer/corednshome/master/src/res/wepay.jpg" alt="微信扫一扫" width="200"></a><a href="alipays://platformapi/startapp?appId=10000007&qrcode=https://qr.alipay.com/tsx00458kzwvymgbjk0ci9e"><img src="https://raw.githubusercontent.com/missdeer/corednshome/master/src/res/alipay.jpg" alt="支付宝扫一扫" width="200"></a></center>
-
-也可以通过[我的推广链接](https://www.boomssv.com/aff.php?aff=2340)注册和使用[Boom服务](https://www.boomssv.com/aff.php?aff=2340)，我可以从中获得返利。
