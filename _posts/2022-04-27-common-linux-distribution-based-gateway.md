@@ -32,8 +32,6 @@ ss-redir -s 123.123.123.123 -p 6789 -k qwerasdfzxcv -m chacha20-ietf -l 58100 -b
 
 &emsp;&emsp;其中`123.123.123.123`是服务器地址，`6789`是服务器端口，`qwerasdfzxcv`是密码，`chacha20-ietf`是传输协议使用的加密算法，`58100`是本地监听的以`redir`模式运行的端口，`0.0.0.0`则是指定监听端口绑定的地址，一定要用`0.0.0.0`才能让局域网中其他设备连上来，否则只能本机连接。最后的`ss-redir.pid`是给程序一个写入该进程id的文件名，这样程序会切换到后台运行，而不会占用前台。
 
-&emsp;&emsp;插一个广告，我目前使用的机场 [Boom](https://www.boomssv.com/aff.php?aff=2340) 是开了很多年的老机场了，老板和员工都肉身在墙外，相对比较安全（看看曾经最大的机场喵帕斯）。全中转节点（所以主营ss协议），几十条线路，多地区落地，大多解锁Netflix、YouTube、DAZN、Disney+等流媒体，价格不贵，适合家用，点[这里访问他们官网](https://www.boomssv.com/aff.php?aff=2340)。
-
 &emsp;&emsp;接下来将流量转发到ss-redir开的端口（上面用的是58100）上去，Linux上用iptables：
 
 ```shell
