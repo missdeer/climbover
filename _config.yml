@@ -1,8 +1,8 @@
 title: Climb Over
 email: brownfoxservice@gmail.com
 description: As Archive 
-baseurl: "/" 
-url: "https://climbover.pages.dev" 
+#baseurl: "/" 
+#url: "https://climbover.pages.dev" 
 github_username: brownfoxservice
 highlighter: rouge
 svg:
@@ -13,6 +13,7 @@ highlighter-theme: monokai
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
+  - jekyll-gist
 category_dir: category/
 tag_dir: tag/
 
