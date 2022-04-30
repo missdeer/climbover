@@ -29,7 +29,7 @@ category: traffic
 &emsp;&emsp;我是从[MaxMind](https://www.maxmind.com/en/geoip2-precision-country-service)下载到IP地区Geoip数据库的，下载需要license，可以免费在线申请，如果不想自己申请的话，可以在GitHub上搜一个，有些人不注意就把他申请的license一起提交了。用以下命令下载，记得把`{license}`替换成有效的license：
 
 ```bash
-curl -L "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country-CSV&license_key=XjJPlqe6tQVGwwHv&suffix=zip" -o GeoLite2-Country-CSV.zip
+curl -L "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country-CSV&license_key={license}&suffix=zip" -o GeoLite2-Country-CSV.zip
 ```
 
 &emsp;&emsp;得到按国家地区分布的IP数据库后，解压，再写几行shell脚本，生成前面说的ipset配置文件：
