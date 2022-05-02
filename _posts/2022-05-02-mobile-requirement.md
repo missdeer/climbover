@@ -32,7 +32,7 @@ category: mobile
 
 &emsp;&emsp;有了公网IP后，需要给它绑定一个域名，目前网上有一些提供动态域名的服务，比如[花生壳](https://hsk.oray.com/)，具体操作和注意事项看他们官方网站即可。也可以自己注册一个便宜的域名，托管到DNSPOD或Cloudflare上，然后运行一个程序（网上有很多这种小程序，随便搜一个就行，会写代码的自己写一个也行，比如我就[自己写了一个](https://github.com/missdeer/ddnsclient)）周期性地检测IP变化并更新域名设置。
 
-&emsp;&emsp;如果实在搞不到公网IP，那只能买一个便宜的VPS，然后用frp做内网穿透，这是没办法的办法了。当然也可以和人一起拼车域名和VPS，以节省一些开支。
+&emsp;&emsp;如果实在搞不到公网IP，那只能买一个便宜的VPS，然后用[frp](https://github.com/fatedier/frp)之类做内网穿透，这是没办法的办法了。当然也可以和人一起拼车域名和VPS，以节省一些开支，一个人只用来做内网穿透也太浪费了。
 
 &emsp;&emsp;然后，在这个网关设备上安装OpenVPN服务端，网上有一个[一键安装脚本](https://github.com/Nyr/openvpn-install)，非常简单易用，至今仍在积极维护：
 
