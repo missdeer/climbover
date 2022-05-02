@@ -12,7 +12,7 @@ category: mobile
 
 &emsp;&emsp;Android端早期几乎是靠[Max Lv（GitHub id：madeye）](https://github.com/madeye)的一己之力撑起来的，最早的[GAEProxy](https://github.com/madeye/gaeproxy)，[ProxyDroid](https://github.com/madeye/proxydroid)，后来的[Shadowsocks for Android](https://github.com/shadowsocks/shadowsocks-android)（中文名：影梭），都是使用甚广。他使用的代理技术（早期靠root后用iptables，就是[基于通用Linux发行版的科学上网网关](/gateway/2022/04/27/common-linux-distribution-based-gateway)使用的技术，后期不需要root了就靠系统VPN service）为后来的各种代理app提供了巨大的参考价值，甚至有一些app直接套用了Shadowsocks for Android的源代码，把核心代理协议换掉就行了。
 
-&emsp;&emsp;后来新出来的代理app主要做了两方面的工作，一个是换协议，比如换成v2ray的vmess/vless，换成trojan，另一个是换交互，比如基于规则的配置，现在最流行的大量就是clash了。移动端技术上没什么值得多说的，反正沿用Shadowsocks for Android那一套框架就行了。
+&emsp;&emsp;后来新出来的代理app主要做了两方面的工作，一个是换协议，比如换成v2ray的vmess/vless，换成trojan，另一个是换交互，比如基于规则的配置，现在最流行的大概就是clash了。移动端技术上没什么值得多说的，反正沿用Shadowsocks for Android那一套框架就行了。
 
 ## iOS
 
