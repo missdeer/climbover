@@ -120,7 +120,7 @@ code {
 
 .sidebar-brand>a {
 	font-size: 300%;
-	font-family: 'Gelasio';
+	font-family: "LXGW WenKai Screen";
 	color: #fff;
 }
 
@@ -319,14 +319,14 @@ header.home {
 
 footer {
 	padding-top: 15px;
-	font-family: 'Ubuntu';
+	font-family: "LXGW WenKai Screen";
 }
 
 .sidebar-footer {
 	margin-top: 80px;
 	font-size: 0.75em;
 	font-weight: lighter;
-	font-family: "Roboto";
+	font-family: "LXGW WenKai Screen";
 	line-height: 1.5;
 }
 
