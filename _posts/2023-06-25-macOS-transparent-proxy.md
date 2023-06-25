@@ -135,20 +135,23 @@ pfctl -f /etc/pf.conf
 如果一切顺利，这时系统中的TCP流量应该已经被全局代理了，可以使用`curl`命令测试一下：
 
 ```bash
-$ curl -I https://www.google.com --resolve 'www.google.com:443:216.58.200.36'
-HTTP/2 302
-location: https://www.google.com.hk/url?sa=p&hl=zh-CN&pref=hkredirect&pval=yes&q=https://www.google.com.hk/&ust=1550640983822937&usg=AOvVaw3PnKH6XFhOkLB56FH7sVHc
-cache-control: private
-content-type: text/html; charset=UTF-8
-p3p: CP="This is not a P3P policy! See g.co/p3phelp for more info."
-date: Wed, 20 Feb 2019 05:35:53 GMT
-server: gws
-content-length: 372
-x-xss-protection: 1; mode=block
-x-frame-options: SAMEORIGIN
-set-cookie: 1P_JAR=2019-02-20-05; expires=Fri, 22-Mar-2019 05:35:53 GMT; path=/; domain=.google.com
-set-cookie: NID=160=U44fC0UHxupm7ClkYUGknQQR8gT8JmqDIhrL3VDquqo6wFketgeSCqBEgNHea2cClfa8pyYwo1u2X44uU7vIaEd5Bxeoakgtwq0aauu5Kzv5hX0N65TNmPH7LYTaESyQAT5lVMSu_RO9JarbeukX2oNoVBL_y3q0d8sty2_u7eU; expires=Thu, 22-Aug-2019 05:35:53 GMT; path=/; domain=.google.com; HttpOnly
-alt-svc: quic=":443"; ma=2592000; v="44,43,39"
+$ curl api.twitter.com -vv
+*   Trying 104.244.42.2:80...
+* Connected to api.twitter.com (104.244.42.2) port 80 (#0)
+> GET / HTTP/1.1
+> Host: api.twitter.com
+> User-Agent: curl/7.84.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 301 Moved Permanently
+< location: https://api.twitter.com/
+< x-connection-hash: 0b84c69298c2b1126540efff094caec1111e695f3481c325800f84212cbf4658
+< date: Sun, 25 Jun 2023 02:45:05 GMT
+< server: tsa_p
+< content-length: 0
+<
+* Connection #0 to host api.twitter.com left intact
 ```
 
 ## 汇总
