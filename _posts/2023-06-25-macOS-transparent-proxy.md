@@ -151,3 +151,54 @@ set-cookie: NID=160=U44fC0UHxupm7ClkYUGknQQR8gT8JmqDIhrL3VDquqo6wFketgeSCqBEgNHe
 alt-svc: quic=":443"; ma=2592000; v="44,43,39"
 ```
 
+## 汇总
+
+可以写一个shell脚本用于启动整个流程：
+
+```bash
+#!/bin/sh
+if [[ $EUID -ne 0 ]]; then
+        echo "Current EUID=$EUID, This script must be run as root"
+        exit 1
+fi
+
+if [[ ! -d /usr/local/share ]]; then
+        mkdir -p /usr/local/share
+fi
+
+ln -sf $HOME/climbover /usr/local/share/climbover
+
+cd $HOME/climbover/coredns
+$PWD/coredns -conf $PWD/Corefile &
+cd $HOME/climbover
+$PWD/redir-loadbalance.sh
+sysctl -w net.inet.ip.forwarding=1
+pfctl -e
+pfctl -F all
+pfctl -f /etc/pf.conf
+networksetup -setdnsservers Wi-Fi 127.0.0.1
+```
+
+1. 这个脚本先检查当前用户是否为root。
+2. 将当前存放了众多CIDR txt文件的目录创建软链接到`/usr/local/share/climbover`
+3. 启动CoreDNS作为DNS代理
+4. 启动redir模式的代理程序
+5. 启动pf并加载配置
+6. 最后将当前网络连接的DNS设置为本机地址`127.0.0.1`
+
+最后再写一个shell脚本用于停用代理：
+
+```bash
+#!/bin/sh
+if [[ $EUID -ne 0 ]]; then
+        echo "Current EUID=$EUID, This script must be run as root"
+        exit 1
+fi
+sysctl -w net.inet.ip.forwarding=0
+pfctl -F all
+pfctl -d
+kill -9 `pidof sslocal obfs-local coredns`
+echo "Please recover default DNS server settings"
+```
+
+注意，网络连接中的DNS设置需要手动调整过来。
