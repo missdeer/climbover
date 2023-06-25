@@ -16,7 +16,7 @@ macOS毕竟是UNIX系的，可以非常简单地实现透明代理。
 
 使用root编辑`/etc/pf.conf`文件（注意做好备份）：
 
-```txt
+```shell
 scrub-anchor "com.apple/*"
 
 table <direct_cidr> persist file "/usr/local/share/climbover/direct_cidr.txt"
@@ -65,7 +65,7 @@ load anchor "com.apple" from "/etc/pf.anchors/com.apple"
 
 很多代理软件是不能直接读取到pf转发到端口的流量数据的，这就需要[redsocks](https://github.com/darkk/redsocks)转换一下，配置文件大体如下：
 
-```txt
+```shell
 base {
   log_debug = off;
   log_info = on;
@@ -86,7 +86,7 @@ redsocks {
 
 不过我用的是[shadowsocks-rust](https://github.com/shadowsocks/shadowsocks-rust)直接就支持了，省掉了[redsocks](https://github.com/darkk/redsocks)转换这一步，可以直接配置使用：
 
-```txt
+```shell
 {
   "locals": [
     {
