@@ -61,6 +61,8 @@ load anchor "com.apple" from "/etc/pf.anchors/com.apple"
 
 这里需要注意一点是，CIDR列表不能太大，太大会加载不成功，具体阈值我也不清楚，但是遇到过。
 
+另外如果不需要那么精细的分流，把含有hk_cidr，tw_cidr等等的几行删掉即可，即`table <...> persist file...`的行和`rdr pass on...`的行，删掉后即让所有海外流量全部走同一个代理出去。
+
 ## 配置代理软件
 
 很多代理软件是不能直接读取到pf转发到端口的流量数据的，这就需要[redsocks](https://github.com/darkk/redsocks)转换一下，配置文件大体如下：
