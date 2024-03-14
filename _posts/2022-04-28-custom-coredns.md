@@ -155,7 +155,7 @@ echo "  except $china " >> Corefile
 &emsp;&emsp;我把这个脚本放在gist上，于是可以这样生成Corefile：
 
 ```bash
-curl -sSL https://gist.githubusercontent.com/missdeer/5c7c82b5b67f8afb41cfd43d51b82c2d/raw/gen_Corefile.sh | bash
+curl -sSL git.io/corefile | bash
 ```
 
 &emsp;&emsp;到此为止，就已经得到国内CDN友好的无污染DNS解析服务了。
